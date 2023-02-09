@@ -1,4 +1,5 @@
 import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.ArrayDeque;
 
@@ -36,8 +37,10 @@ public class QueueExercise {
      * implements the Queue interface, such as ArrayDeque. Deques contain all the methods required for both Queue and
      * Stack behavior.
      */
-    public Deque<String> createQueue(){
-        return null;
+    public Deque<String> createQueue()
+    {   
+        LinkedList<String> ll = new LinkedList<String>();
+        return ll;
     }
 
     /**
@@ -45,8 +48,10 @@ public class QueueExercise {
      * @param queue a Queue<String> object.
      * @return the length of queue.
      */
-    public int getSize(Queue<String> queue){
-        return 0;
+    public int getSize(Queue<String> queue)
+    {
+
+        return queue.size();
     }
 
     /**
@@ -55,8 +60,9 @@ public class QueueExercise {
      * @param queue a Queue<String> object.
      * @param item a String that should be added to Queue.
      */
-    public void addToEndOfQueue(Queue<String> queue, String item){
-
+    public void addToEndOfQueue(Queue<String> queue, String item)
+    {
+        queue.add(item);
     }
 
     /**
@@ -65,8 +71,11 @@ public class QueueExercise {
      * @param queue a Queue<String> object.
      * @return the next String due to be removed (polled) from the Queue<String> (the oldest item in the queue.)
      */
-    public String removeFromStartOfQueue(Queue<String> queue){
-        return "";
+    public String removeFromStartOfQueue(Queue<String> queue)
+    {
+
+       return queue.poll();
+        
     }
 
     /**
@@ -76,6 +85,6 @@ public class QueueExercise {
      * @return the next String due to be removed (peeked) from the Queue<String> (the oldest item in the queue.)
      */
     public String getStartOfQueueWithoutRemoving(Queue<String> queue){
-        return "";
+        return queue.peek();
     }
 }
